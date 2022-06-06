@@ -76,7 +76,7 @@ html_theme_options = {
   "icon_links": [
         {
             "name": "GitHub",
-            "url": "https://github.com/vincentchoqueuse/python_course",
+            "url": "https://github.com/vincentchoqueuse/cheatsheet_python",
             "icon": "fab fa-github-square",
         }]
 }
