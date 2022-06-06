@@ -1,0 +1,575 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Python Basics &#8212; python  documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Conditional Statements" href="02_conditions.html" />
+    <link rel="prev" title="Courses" href="index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../index.html">
+  <img src="../_static/logo.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../getting_started/index.html">
+  Getting Started
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="index.html">
+  Courses
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../exercices/index.html">
+  Exercices
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/vincentchoqueuse/python_course" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents:
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Python Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_conditions.html">
+   Conditional Statements
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_iterations.html">
+   Iterations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_functions.html">
+   Functions
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hello-world">
+   Hello World
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#first-program">
+     First Program
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comments">
+     Comments
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variables">
+   Variables
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#built-in-types">
+     Built-in Types
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#assignement">
+     Assignement
+    </a>
+    <ul class="visible nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#examples">
+       Examples
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sequence-types">
+       Sequence Types
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operations">
+     Operations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Examples
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mathematical-program">
+     Mathematical Program
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#turtle-drawing">
+     Turtle Drawing
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <section id="python-basics">
+<h1>Python Basics<a class="headerlink" href="#python-basics" title="Permalink to this headline">#</a></h1>
+<section id="hello-world">
+<h2>Hello World<a class="headerlink" href="#hello-world" title="Permalink to this headline">#</a></h2>
+<section id="first-program">
+<h3>First Program<a class="headerlink" href="#first-program" title="Permalink to this headline">#</a></h3>
+<p>To test our installation, we will write a simple program that displays the message <code class="code docutils literal notranslate"><span class="pre">&quot;Hello</span> <span class="pre">World&quot;</span></code> on the standard output.</p>
+<ul class="simple">
+<li><p>Create a file called <cite>01_first.py</cite>,</p></li>
+<li><p>Open it with a text editor and write</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>To run your code, open your terminal in the same folder of your script and then run the following command</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python 01_first.py
+</pre></div>
+</div>
+<p>The program should print the message “Hello World”. This program is composed of a single function <code class="code docutils literal notranslate"><span class="pre">print()</span></code> that belongs to a list of built-in functions in Python.
+This function takes as input argument a string (a message) delimited by <code class="code docutils literal notranslate"><span class="pre">&quot;.&quot;</span></code>. It outputs the input message on the standard output (your screen).</p>
+<blockquote>
+<div><p><strong>Read the doc :</strong> The documentation of the built-in functions is available <a class="reference external" href="https://docs.python.org/3/library/functions.html">here</a> .</p>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Understand your interpreter ! If your code contains an error, your interpreter will raise an error at runtime. Hopefully, the Python interpreter will give you
+some indications about your error (type of error, location of the error in your code). For example, replacing your code by</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World)</span>
+</pre></div>
+</div>
+<p>will raise the error <code class="code docutils literal notranslate"><span class="pre">SyntaxError:</span> <span class="pre">EOL</span> <span class="pre">while</span> <span class="pre">scanning</span> <span class="pre">string</span> <span class="pre">literal</span></code>.</p>
+</div>
+</section>
+<section id="comments">
+<h3>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">#</a></h3>
+<p>In Python codes, lines beginning with <code class="code docutils literal notranslate"><span class="pre">#</span></code> are not interpreted at runtime.
+In practice, these lines can be used to comment on some parts of our code. For example,
+the following code is strictly equivalent to our first code at runtime.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is my first Python code</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">)</span>
+
+<span class="c1"># bring out the Champagne bro</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">#</a></h2>
+<p>In Python, everything is an object. Python is a dynamically typed language, i.e., the type of an object is determined during runtime.
+It is possible to get the type of an object using the built-in function <code class="code docutils literal notranslate"><span class="pre">type()</span></code>. For example, the following code displays the type of the number <code class="code docutils literal notranslate"><span class="pre">3.14</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># display the type of 3.14</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mf">3.14</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>The output shows that the type is <code class="code docutils literal notranslate"><span class="pre">&lt;class</span> <span class="pre">'float'&gt;</span></code>. This type belongs to the category of numeric types.</p>
+<section id="built-in-types">
+<h3>Built-in Types<a class="headerlink" href="#built-in-types" title="Permalink to this headline">#</a></h3>
+<p>Built-in Python types can be classified in 6 categories.</p>
+<ul class="simple">
+<li><p>Booleans: <code class="code docutils literal notranslate"><span class="pre">True</span></code>, <code class="code docutils literal notranslate"><span class="pre">False</span></code>,</p></li>
+<li><p>Numeric Types: <code class="code docutils literal notranslate"><span class="pre">int</span></code>, <code class="code docutils literal notranslate"><span class="pre">float</span></code>, <code class="code docutils literal notranslate"><span class="pre">complex</span></code>,</p></li>
+<li><p>Text Sequence Type (string): <code class="code docutils literal notranslate"><span class="pre">str</span></code>,</p></li>
+<li><p>Mapping Types: <code class="code docutils literal notranslate"><span class="pre">dict</span></code>,</p></li>
+<li><p>Sequence Types: <code class="code docutils literal notranslate"><span class="pre">list</span></code>, <code class="code docutils literal notranslate"><span class="pre">tuple</span></code>, <code class="code docutils literal notranslate"><span class="pre">range</span></code>,</p></li>
+<li><p>(Binary Sequence Types: <code class="code docutils literal notranslate"><span class="pre">bytes</span></code>, <code class="code docutils literal notranslate"><span class="pre">bytearray</span></code>, <code class="code docutils literal notranslate"><span class="pre">memoryview</span></code>)</p></li>
+</ul>
+</section>
+<section id="assignement">
+<h3>Assignement<a class="headerlink" href="#assignement" title="Permalink to this headline">#</a></h3>
+<p>In Python, the content of an object can vary during the code execution. For this reason, we commonly used the
+term variable. A variable is described by its name, which acts like a
+label. This label can be used to easily access its content.</p>
+<p>The content of a variable can be assigned using the operator <code class="code docutils literal notranslate"><span class="pre">=</span></code>. For example, the following code shows how to assign the value 3.14 to
+a variable named <code class="code docutils literal notranslate"><span class="pre">my_var</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># assign the content of a variable</span>
+<span class="n">my_var</span> <span class="o">=</span> <span class="mf">3.14</span>
+</pre></div>
+</div>
+<p>It is then possible to print the content of <code class="code docutils literal notranslate"><span class="pre">my_var</span></code> as follows</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># print the content of a variable</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_var</span><span class="p">)</span>
+</pre></div>
+</div>
+<section id="examples">
+<h4>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">#</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_boolean</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">my_integer</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">my_float</span> <span class="o">=</span> <span class="mf">3.245</span>
+<span class="n">my_string</span> <span class="o">=</span> <span class="s2">&quot;hello world&quot;</span>
+<span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;firstname&quot;</span><span class="p">:</span> <span class="s2">&quot;toto&quot;</span><span class="p">,</span> <span class="s2">&quot;lastname&quot;</span><span class="p">:</span> <span class="s2">&quot;tata&quot;</span><span class="p">}</span>
+<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
+<span class="n">my_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note that Python automatically chooses the “most appropriate” type for each variable based on its content.</p>
+</section>
+<section id="sequence-types">
+<h4>Sequence Types<a class="headerlink" href="#sequence-types" title="Permalink to this headline">#</a></h4>
+<p>For sequence types such as string, list, (the value of) one particular element can be assigned using the syntax <code class="code docutils literal notranslate"><span class="pre">var[index]</span> <span class="pre">=</span> <span class="pre">value</span></code>, where <code class="code docutils literal notranslate"><span class="pre">index</span></code> corresponds to
+the index of the element to be changed.</p>
+<p>The following program show how to modify the second element of a list.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># initialisation</span>
+<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
+
+<span class="c1"># algorithm</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;before: my_list=</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">my_list</span><span class="p">))</span>
+<span class="n">my_list</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;after: my_list=</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">my_list</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In Python, the index of the first element of a sequency type is 0.</p>
+</div>
+<p>It is also possible to assign one particular element of a list to a variable using the following syntax</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># initialisation</span>
+<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
+
+<span class="c1"># algorithm</span>
+<span class="n">value</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Third element: value=</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="operations">
+<h3>Operations<a class="headerlink" href="#operations" title="Permalink to this headline">#</a></h3>
+<p>Each built-in type supports a list of operation. An operation can be described by the general form</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">operand1</span> <span class="n">operator</span> <span class="n">operand1</span>
+</pre></div>
+</div>
+<p>For example, it is possible to use a mathematical operation between two numbers</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">6</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>where <cite>operand1</cite> corresponds to the value 3 (an integer), <cite>operation</cite> corresponds to the mathematical addition, and <cite>operand2</cite> corresponds to value 6 (an integer).</p>
+<blockquote>
+<div><p><strong>Read the doc :</strong> The methods and operators of the built-in types are described in the official <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html">documentation</a> .</p>
+</div></blockquote>
+<p>It is also possible to perform an operation between two operands with different types.
+When using an operator between two operands with different types, it is important to check if the operand types are compatible.
+For example, it is possible to use a mathematical operator between an integer and a float:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="mf">3.245</span> <span class="c1"># result will be a float</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>However, the following code will raise an error.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="s2">&quot;15&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Indeed, Python raises the following error during runtime:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Type</span> <span class="n">error</span><span class="p">:</span> <span class="ne">TypeError</span><span class="p">:</span> <span class="n">unsupported</span> <span class="n">operand</span> <span class="nb">type</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="o">+</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span> <span class="ow">and</span> <span class="s1">&#39;str&#39;</span>
+</pre></div>
+</div>
+<p>This error means that Python does not know how to add the integer <code class="code docutils literal notranslate"><span class="pre">3</span></code> with the string <code class="code docutils literal notranslate"><span class="pre">&quot;15&quot;</span></code>.</p>
+<p>The operation used between two operands depends on the operand types. Indeed, let us consider the following code</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="s2">&quot;3&quot;</span> <span class="o">+</span> <span class="s2">&quot;15&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This program displays the result <code class="code docutils literal notranslate"><span class="pre">&quot;315&quot;</span></code>. Indeed, when used between two strings, the operation <code class="code docutils literal notranslate"><span class="pre">+</span></code> corresponds to a string concatenation. Therefore,</p>
+</section>
+</section>
+<section id="id1">
+<h2>Examples<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<section id="mathematical-program">
+<h3>Mathematical Program<a class="headerlink" href="#mathematical-program" title="Permalink to this headline">#</a></h3>
+<p>In this example, we will create a simple python code that computes the circumference of a circle from its radius. Mathematically, the circumference of
+a circle is given by</p>
+<div class="math notranslate nohighlight">
+\[C = 2\pi r\]</div>
+<p>where <span class="math notranslate nohighlight">\(r\)</span> corresponds to the circle radius. To implement this expression, we first propose to approximate <span class="math notranslate nohighlight">\(\pi\)</span> by
+<code class="code docutils literal notranslate"><span class="pre">my_pi</span> <span class="pre">=</span> <span class="pre">3.14</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">my_pi</span> <span class="o">=</span> <span class="mf">3.14</span>
+<span class="n">output</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">my_pi</span> <span class="o">*</span> <span class="n">r</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The above code uses a coarse approximation of <span class="math notranslate nohighlight">\(\pi\)</span>. In python, a better approximation of <span class="math notranslate nohighlight">\(\pi\)</span> is available in the
+module <code class="code docutils literal notranslate"><span class="pre">math</span></code>. The module <code class="code docutils literal notranslate"><span class="pre">math</span></code> provides access to some classical mathematical constants and functions.</p>
+<blockquote>
+<div><p><strong>Read the doc :</strong> The documentation for the module <code class="code docutils literal notranslate"><span class="pre">math</span></code> is available <a class="reference external" href="https://docs.python.org/3/library/math.html">here</a> .</p>
+</div></blockquote>
+<p>Using the mode <code class="code docutils literal notranslate"><span class="pre">math</span></code>, our code can be rewritten as</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">result</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">pi</span> <span class="o">*</span> <span class="n">r</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>There are several ways to further improve our program. First, the above example displays the circle circumference without showing any indication to the user (does the output corresponds to the circumference, the radius, or something else ?).
+It is usually a bad practice to display information without contextualization.
+To contextualize our output, we can mix both a static message and the content of a variable using the <code class="code docutils literal notranslate"><span class="pre">format</span></code> method.
+For example, the next code shows how to display the message <code class="code docutils literal notranslate"><span class="pre">the</span> <span class="pre">circumference</span> <span class="pre">is</span> <span class="pre">{}</span></code> where <code class="code docutils literal notranslate"><span class="pre">{}</span></code> is replaced by the content of the variable <cite>output</cite>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">result</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">pi</span> <span class="o">*</span> <span class="n">r</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;the circumference is=</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>The method <code class="code docutils literal notranslate"><span class="pre">format()</span></code> is a particular function for string. A string calling this method contains literal text or replacement fields delimited by braces <span class="math notranslate nohighlight">\({}\)</span>.
+This method allows one or multiple arguments, separated by a <code class="code docutils literal notranslate"><span class="pre">,</span></code>. The number of provided arguments must match the number
+of <code class="code docutils literal notranslate"><span class="pre">{}</span></code> in the message. For example, the next code shows how to print the radius and the circumference.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">result</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">pi</span> <span class="o">*</span> <span class="n">r</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;the circumference of a circle of radius=</span><span class="si">{}</span><span class="s2"> is=</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">result</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>To make this code more interactive, we will ask the user for the value of the circle radius <code class="code docutils literal notranslate"><span class="pre">r</span></code>. This behavior can be achieved using the <code class="code docutils literal notranslate"><span class="pre">input</span></code> built-in function. The built-in function waits for a user input message.
+The output of this function is a text sequence. This text sequence can be converted into a numeric value using the
+<code class="code docutils literal notranslate"><span class="pre">float</span></code> build-in function.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span>
+
+<span class="n">text_value</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Value of the radius ? &quot;</span><span class="p">)</span>
+<span class="n">r</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">text_value</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">pi</span> <span class="o">*</span> <span class="n">r</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;the circumference is=</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+<section id="turtle-drawing">
+<h3>Turtle Drawing<a class="headerlink" href="#turtle-drawing" title="Permalink to this headline">#</a></h3>
+<p>In this example, we will draw a simple shape (a rectangle) using the <a class="reference external" href="https://docs.python.org/3/library/turtle.html">Turtle</a> drawing module.
+A basic usage of the Turtle module is provided below. This example simply draws a solid line.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import the turtle module</span>
+<span class="kn">import</span> <span class="nn">turtle</span>
+
+<span class="c1"># Create a new Turtle object called my_turtle</span>
+<span class="n">my_turtle</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+
+<span class="c1"># Call the forward method to move the turtle</span>
+<span class="n">my_turtle</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+
+<span class="c1"># display the result</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">done</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Imagine we want to draw a rectangle with width <code class="code docutils literal notranslate"><span class="pre">x</span></code> and height <code class="code docutils literal notranslate"><span class="pre">y</span></code> using the Turtle Module. To make the program more interactive, we also want that the user
+specifies the width and height at runtime n.</p>
+<p>To implement this program, one solution is to use the following procedure</p>
+<ul class="simple">
+<li><p>Create two variables <code class="code docutils literal notranslate"><span class="pre">x</span></code> and <code class="code docutils literal notranslate"><span class="pre">y</span></code> to store the rectangle width and height. The contents of these variables can be set at runtime by the user using the <code class="code docutils literal notranslate"><span class="pre">input</span></code> built-in function,</p></li>
+<li><p>Create a <code class="code docutils literal notranslate"><span class="pre">Turtle</span></code> object using Turtle Module,</p></li>
+<li><p>Construct the rectangle by using the methods <code class="code docutils literal notranslate"><span class="pre">forward(.)</span></code> and <code class="code docutils literal notranslate"><span class="pre">right(.)</span></code> (rotation by several degrees)</p></li>
+</ul>
+<p>The final code is provided below</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">turtle</span>
+
+<span class="c1"># get width and height</span>
+<span class="n">x_str</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Rectangle width ? &quot;</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">x_str</span><span class="p">)</span>
+<span class="n">y_str</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Rectangle height ? &quot;</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">y_str</span><span class="p">)</span>
+
+<span class="c1"># create the turtle</span>
+<span class="n">my_turtle</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+<span class="n">my_turtle</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">my_turtle</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">my_turtle</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="n">my_turtle</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">my_turtle</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">my_turtle</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">my_turtle</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="n">my_turtle</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+
+<span class="n">turtle</span><span class="o">.</span><span class="n">done</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, V. Choqueuse.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>
