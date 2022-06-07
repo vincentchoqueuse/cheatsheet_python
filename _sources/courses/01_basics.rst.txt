@@ -16,15 +16,17 @@ To test our installation, we will write a simple program that displays the messa
 
     print("Hello World")
 
-* To run your code, open your terminal in the same folder of your script and then run the following command 
+* open your terminal in the folder of your script and then run the following command 
 
 .. code :: bash
 
     $ python 01_first.py
 
 
-The program should print the message "Hello World". This program is composed of a single function :code:`print()` that belongs to a list of built-in functions in Python. 
-This function takes as input argument a string (a message) delimited by :code:`"."`. It outputs the input message on the standard output (your screen).
+This program should print the message :code:`Hello World` in your terminal. 
+
+Let's dive into the code. This simple program is composed of a single line of code. This line of code calls the function :code:`print()`. This function belongs to a list of built-in functions in Python. 
+It takes as input argument a string (a message) delimited by :code:`"."`, and outputs the input message on the standard output (your screen).
 
     **Read the doc :** The documentation of the built-in functions is available `here <https://docs.python.org/3/library/functions.html>`_ .
 
@@ -37,7 +39,7 @@ This function takes as input argument a string (a message) delimited by :code:`"
         
         print("Hello World)
         
-    will raise the error :code:`SyntaxError: EOL while scanning string literal`.
+    will raise the error :code:`SyntaxError: EOL while scanning string literal`. This means that Python has detected an "End of Line" before a string message has been properly closed.
 
 Comments
 ++++++++
@@ -52,6 +54,17 @@ the following code is strictly equivalent to our first code at runtime.
     print("Hello World")
 
     # bring out the Champagne bro
+
+You can also comment several lines using the syntax :code:`"""."""`.
+
+.. code :: python 
+
+    """ This is my first Python code
+    This code is composed of a long comment. 
+    Bring out the Champagne bro !
+    """
+
+    print("Hello World")
 
 
 Variables

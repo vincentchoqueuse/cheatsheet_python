@@ -276,13 +276,14 @@
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>To run your code, open your terminal in the same folder of your script and then run the following command</p></li>
+<li><p>open your terminal in the folder of your script and then run the following command</p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python 01_first.py
 </pre></div>
 </div>
-<p>The program should print the message “Hello World”. This program is composed of a single function <code class="code docutils literal notranslate"><span class="pre">print()</span></code> that belongs to a list of built-in functions in Python.
-This function takes as input argument a string (a message) delimited by <code class="code docutils literal notranslate"><span class="pre">&quot;.&quot;</span></code>. It outputs the input message on the standard output (your screen).</p>
+<p>This program should print the message <code class="code docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">World</span></code> in your terminal.</p>
+<p>Let’s dive into the code. This simple program is composed of a single line of code. This line of code calls the function <code class="code docutils literal notranslate"><span class="pre">print()</span></code>. This function belongs to a list of built-in functions in Python.
+It takes as input argument a string (a message) delimited by <code class="code docutils literal notranslate"><span class="pre">&quot;.&quot;</span></code>, and outputs the input message on the standard output (your screen).</p>
 <blockquote>
 <div><p><strong>Read the doc :</strong> The documentation of the built-in functions is available <a class="reference external" href="https://docs.python.org/3/library/functions.html">here</a> .</p>
 </div></blockquote>
@@ -293,7 +294,7 @@ some indications about your error (type of error, location of the error in your 
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World)</span>
 </pre></div>
 </div>
-<p>will raise the error <code class="code docutils literal notranslate"><span class="pre">SyntaxError:</span> <span class="pre">EOL</span> <span class="pre">while</span> <span class="pre">scanning</span> <span class="pre">string</span> <span class="pre">literal</span></code>.</p>
+<p>will raise the error <code class="code docutils literal notranslate"><span class="pre">SyntaxError:</span> <span class="pre">EOL</span> <span class="pre">while</span> <span class="pre">scanning</span> <span class="pre">string</span> <span class="pre">literal</span></code>. This means that Python has detected an “End of Line” before a string message has been properly closed.</p>
 </div>
 </section>
 <section id="comments">
@@ -305,6 +306,15 @@ the following code is strictly equivalent to our first code at runtime.</p>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">)</span>
 
 <span class="c1"># bring out the Champagne bro</span>
+</pre></div>
+</div>
+<p>You can also comment several lines using the syntax <code class="code docutils literal notranslate"><span class="pre">&quot;&quot;&quot;.&quot;&quot;&quot;</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; This is my first Python code</span>
+<span class="sd">This code is composed of a long comment.</span>
+<span class="sd">Bring out the Champagne bro !</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
