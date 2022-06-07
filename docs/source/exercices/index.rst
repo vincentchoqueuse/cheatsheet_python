@@ -14,7 +14,7 @@ Exercices
 Be organized 
 ------------
 
-Before diving into the exercices, I recommend you to create a folder with the following organisation 
+I recommend you to create a folder with the following organisation 
 
 .. code :: bash
 
@@ -30,3 +30,9 @@ Before diving into the exercices, I recommend you to create a folder with the fo
             03_math.py
             ...
         ...
+
+
+Solutions
+---------
+
+The solution of the exercices are available on `Github <https://github.com/vincentchoqueuse/cheatsheet_python/tree/main/docs/source/extra/solutions>`_ .
