@@ -176,6 +176,31 @@
 <span class="n">value</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># assign the second element of my_list (0 indexed) to the variable value</span>
 </pre></div>
 </div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># conditional statement</span>
+<span class="n">value</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span>  <span class="c1"># check if the value of x is equal to 3 (returns True or False)</span>
+
+<span class="k">if</span> <span class="n">value</span><span class="p">:</span>   <span class="c1"># if value is evaluated to True, do the following stuff</span>
+    <span class="c1"># do something</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;true&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># iterations</span>
+
+<span class="c1">## for loops</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>   <span class="c1"># for x ranging from 0 to 10 (excluded), do the following stuff</span>
+    <span class="c1"># do something</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>   <span class="c1"># for x ranging from 2 to 10 (excluded) with increment of 2, do the following stuff</span>
+    <span class="c1"># do something</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c1">## while loop</span>
+<span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">indice</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">):</span>  <span class="c1"># while indice is strictly lower than 10</span>
+    <span class="n">indice</span> <span class="o">=</span> <span class="n">indice</span><span class="o">+</span><span class="mi">1</span>
+</pre></div>
+</div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># function definition</span>
 <span class="k">def</span> <span class="nf">sum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>   <span class="c1"># create a function named sum with input arguments a and b</span>
     <span class="k">return</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>   <span class="c1"># returns the value of a+b</span>
