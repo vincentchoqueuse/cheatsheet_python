@@ -13,6 +13,7 @@ Cheatsheet
 
 
 .. code ::
+
     # conditional statement
     value = (x == 3)  # check if the value of x is equal to 3 (returns True or False)
 
@@ -21,6 +22,7 @@ Cheatsheet
         print("true")
 
 .. code :: 
+    
     # iterations 
 
     ## for loops
