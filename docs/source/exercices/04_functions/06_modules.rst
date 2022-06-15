@@ -1,4 +1,4 @@
-Exercice 5
+Exercice 6
 ++++++++++
 
 Create a Python function that draw a sinewave with the module and matplotlib modules using the mathematical expression 
