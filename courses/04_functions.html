@@ -1,22 +1,16 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Functions &#8212; python  documentation</title>
-<script>
-  document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
-</script>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
-
-
+    
   <link rel="stylesheet"
     href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
@@ -24,57 +18,54 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/css/blank.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
-
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Exercices" href="../exercices/index.html" />
     <link rel="prev" title="Iterations" href="03_iterations.html" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="en">
-  </head>
-  
-  
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
-    <div class="bd-header-announcement container-fluid" id="banner">
-      
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
 
-    </div>
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
 
     
-    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
 
   <div id="navbar-start">
     
     
-  
 
-
-<a class="navbar-brand logo" href="../index.html">
-  
-  
-  
-  
-    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image">
-    <img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image">
-  
-  
+<a class="navbar-brand" href="../index.html">
+  <img src="../_static/logo.png" class="logo" alt="logo">
 </a>
+
+
     
   </div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="fas fa-bars"></span>
+    <span class="navbar-toggler-icon"></span>
   </button>
 
   
@@ -116,18 +107,12 @@
     <div id="navbar-end">
       
       <div class="navbar-end-item">
-        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
-    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
-    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
-    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
-</span>
-      </div>
-      
-      <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/vincentchoqueuse/cheatsheet_python" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label></a>
+          <a class="nav-link" href="https://github.com/vincentchoqueuse/cheatsheet_python" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
         </li>
       </ul>
       </div>
@@ -138,18 +123,17 @@
     </nav>
     
 
-    <div class="bd-container container-xl">
-      <div class="bd-container__inner row">
+    <div class="container-xl">
+      <div class="row">
           
-
-<!-- Only show if we have sidebars configured, else just a small margin  -->
-<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
-  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    <p aria-level="2" class="caption" role="heading">
+    <p>
  <span class="caption-text">
   Contents:
  </span>
@@ -179,21 +163,17 @@
 
   </div>
 </nav>
-  </div>
-  <div class="sidebar-end-items">
-  </div>
-</div>
-
-
+            </div>
+            
           
 
-
-<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
-  
-    
-    <div class="toc-item">
-      
-<div class="tocsection onthispage mt-5 pt-1 pb-3">
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -302,33 +282,35 @@
 </ul>
 
 </nav>
-    </div>
-    
-    <div class="toc-item">
-      
-    </div>
-    
-  
-</div>
-
-
-          
-          
-          <div class="bd-content col-12 col-md-9 col-xl-7">
+              </div>
               
-              <article class="bd-article" role="main">
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
                 
   <section id="functions">
-<h1>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">#</a></h1>
+<h1>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h1>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>Functions allow you to organize your code by splitting your program into subprograms. A function is a block of code that only performs <strong>one particular task</strong>.  Instead of using the same block of code to perform a repetitive task,
 the code is specified in a function once and for all. This approach has two benefits: it avoid you to repeat your code, and it increases your code reliability.</p>
 <p>In the previous chapter, we have already used functions, without knowing it, such as <cite>print</cite>, <cite>input</cite> and <cite>randint</cite>. In this chapter, we will learn how to
 create our own functions and organize them into modules.</p>
 </section>
 <section id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">#</a></h2>
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
 <p>To create and use a function, we need 3 steps:</p>
 <ul class="simple">
 <li><p>Identification of the function prototype,</p></li>
@@ -336,7 +318,7 @@ create our own functions and organize them into modules.</p>
 <li><p>Function calling.</p></li>
 </ul>
 <section id="prototype">
-<h3>Prototype<a class="headerlink" href="#prototype" title="Permalink to this heading">#</a></h3>
+<h3>Prototype<a class="headerlink" href="#prototype" title="Permalink to this headline">¶</a></h3>
 <p>A function is described by its <code class="code docutils literal notranslate"><span class="pre">name</span></code> and can take some <code class="code docutils literal notranslate"><span class="pre">input</span> <span class="pre">arguments</span></code> (or parameters) and return some <code class="code docutils literal notranslate"><span class="pre">outputs</span></code>.
 These parameters specify the <strong>function prototype</strong>.</p>
 <blockquote>
@@ -359,7 +341,7 @@ These parameters specify the <strong>function prototype</strong>.</p>
 </ul>
 </section>
 <section id="definition">
-<h3>Definition<a class="headerlink" href="#definition" title="Permalink to this heading">#</a></h3>
+<h3>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h3>
 <p>The function definition can be decomposed into 3 parts.</p>
 <ul class="simple">
 <li><p>First line: the <code class="code docutils literal notranslate"><span class="pre">def</span></code> keyword should be followed by the function name and the input arguments. The input arguments should be specified under parenthesis and separated by commas.</p></li>
@@ -379,10 +361,10 @@ These parameters specify the <strong>function prototype</strong>.</p>
 <p class="admonition-title">Warning</p>
 <p>The function definition only defines the code of the function. In particular, it does not imply that the function will be invoked (or called) by your program. To run the function, the function must be explicitly
 called in your main program (see next section)</p>
-</div>
+</aside>
 </section>
 <section id="function-call">
-<h3>Function Call<a class="headerlink" href="#function-call" title="Permalink to this heading">#</a></h3>
+<h3>Function Call<a class="headerlink" href="#function-call" title="Permalink to this headline">¶</a></h3>
 <p>A function call has the following syntax.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">output1</span><span class="p">,</span> <span class="n">output2</span> <span class="o">=</span> <span class="n">my_function</span><span class="p">(</span><span class="n">val1</span><span class="p">,</span> <span class="n">val2</span><span class="p">,</span> <span class="n">val3</span><span class="p">)</span>
 </pre></div>
@@ -391,7 +373,7 @@ called in your main program (see next section)</p>
 arguments are dispatched to the function with respect to their ordre. For the considered example, <cite>arguments1</cite> refers to <cite>val1</cite>, <cite>arguments2</cite> refers to <cite>val2</cite>, and <cite>arguments3</cite> refers to <cite>val3</cite>.</p>
 </section>
 <section id="code-organisation">
-<h3>Code Organisation<a class="headerlink" href="#code-organisation" title="Permalink to this heading">#</a></h3>
+<h3>Code Organisation<a class="headerlink" href="#code-organisation" title="Permalink to this headline">¶</a></h3>
 <p>For short programs, it is commun to have the function definition and the function call in the same python file. The next example illustrates this situation.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">my_function</span><span class="p">(</span><span class="n">argument1</span><span class="p">,</span> <span class="n">argument2</span><span class="p">,</span> <span class="n">argument3</span><span class="p">):</span>
 
@@ -409,9 +391,9 @@ arguments are dispatched to the function with respect to their ordre. For the co
 </div>
 </section>
 <section id="examples">
-<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h3>
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
 <section id="hello-user">
-<h4>hello_user<a class="headerlink" href="#hello-user" title="Permalink to this heading">#</a></h4>
+<h4>hello_user<a class="headerlink" href="#hello-user" title="Permalink to this headline">¶</a></h4>
 <p>The following lines of code show how to create a function
 named <cite>hello_user</cite> that prints the particular message <code class="code docutils literal notranslate"><span class="pre">&quot;Hello</span> <span class="pre">{username}&quot;</span></code> where the content of <code class="code docutils literal notranslate"><span class="pre">username</span></code> is provided as function input.</p>
 <p>The function prototype is provided below.</p>
@@ -440,7 +422,7 @@ named <cite>hello_user</cite> that prints the particular message <code class="co
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>In the considered example, the function does not return any variable.</p>
-</div>
+</aside>
 <p>The complete code (definition + call) can be</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># function definitions</span>
 <span class="k">def</span> <span class="nf">hello_user</span><span class="p">(</span><span class="n">username</span><span class="p">):</span>
@@ -452,7 +434,7 @@ named <cite>hello_user</cite> that prints the particular message <code class="co
 </div>
 </section>
 <section id="maximum">
-<h4>maximum<a class="headerlink" href="#maximum" title="Permalink to this heading">#</a></h4>
+<h4>maximum<a class="headerlink" href="#maximum" title="Permalink to this headline">¶</a></h4>
 <p>In this example, we develop a program that computes the maximum of a list of numbers.
 Note that Python already have a function to find the maximum of a list (<a class="reference external" href="https://docs.python.org/3/library/functions.html#max">https://docs.python.org/3/library/functions.html#max</a>). Our objective here is to reproduce the behavior of this function.</p>
 <p><strong>Prototype</strong></p>
@@ -502,7 +484,7 @@ Note that Python already have a function to find the maximum of a list (<a class
 </div>
 </section>
 <section id="sinewave">
-<h4>sinewave<a class="headerlink" href="#sinewave" title="Permalink to this heading">#</a></h4>
+<h4>sinewave<a class="headerlink" href="#sinewave" title="Permalink to this headline">¶</a></h4>
 <p>The following lines of code show how to create a function named <cite>sinewave</cite> that computes the value of a sinewave.
 The mathematical expression of a sinewave is given by</p>
 <div class="math notranslate nohighlight">
@@ -566,11 +548,11 @@ The mathematical expression of a sinewave is given by</p>
 </section>
 </section>
 <section id="modules">
-<h2>Modules<a class="headerlink" href="#modules" title="Permalink to this heading">#</a></h2>
+<h2>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h2>
 <p>For complex programs, it is commun to use a long list of functions. To make the code clearer,
 these functions can be organized in a collection of files called <a class="reference external" href="https://docs.python.org/3/tutorial/modules.html">module</a>.</p>
 <section id="standard-modules">
-<h3>Standard Modules<a class="headerlink" href="#standard-modules" title="Permalink to this heading">#</a></h3>
+<h3>Standard Modules<a class="headerlink" href="#standard-modules" title="Permalink to this headline">¶</a></h3>
 <p>Python comes with a library of standard modules. The list of modules is available <a class="reference external" href="https://docs.python.org/3/library/">here</a>.
 For example, the following line shows how to import the <code class="code docutils literal notranslate"><span class="pre">randint</span></code> function from the <code class="code docutils literal notranslate"><span class="pre">random</span></code> module of standard library.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
@@ -582,7 +564,7 @@ For example, the following line shows how to import the <code class="code docuti
 <p>Note that this code does not contain the definition of the randint function. This function is defined in the random module (see source code is <a class="reference external" href="https://github.com/python/cpython/blob/main/Lib/random.py#L325">here</a>).</p>
 <p>Three different syntaxes can be used to import a function of a particular module.</p>
 <section id="specific-import">
-<h4>Specific Import<a class="headerlink" href="#specific-import" title="Permalink to this heading">#</a></h4>
+<h4>Specific Import<a class="headerlink" href="#specific-import" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
 
 <span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
@@ -590,7 +572,7 @@ For example, the following line shows how to import the <code class="code docuti
 </div>
 </section>
 <section id="import-with-namespace">
-<h4>Import with namespace<a class="headerlink" href="#import-with-namespace" title="Permalink to this heading">#</a></h4>
+<h4>Import with namespace<a class="headerlink" href="#import-with-namespace" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span> <span class="k">as</span> <span class="nn">rnd</span>
 
 <span class="n">x</span> <span class="o">=</span> <span class="n">rnd</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
@@ -598,7 +580,7 @@ For example, the following line shows how to import the <code class="code docuti
 </div>
 </section>
 <section id="full-import">
-<h4>Full Import<a class="headerlink" href="#full-import" title="Permalink to this heading">#</a></h4>
+<h4>Full Import<a class="headerlink" href="#full-import" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
@@ -611,17 +593,17 @@ and usually gives some commented examples.</p>
 <p class="admonition-title">Note</p>
 <p>Many students prefers to specify a request on Google to know how to use a function.
 It is a bad practice. Indeed, the google search engine usually redirects to a Stackoverflow page, where the best stackoverflow answer usually redirects to the official documentation with the aggressive comment: “Read The Doc !”.</p>
-</div>
+</aside>
 </section>
 </section>
 <section id="non-standard-modules">
-<h3>Non Standard Modules<a class="headerlink" href="#non-standard-modules" title="Permalink to this heading">#</a></h3>
+<h3>Non Standard Modules<a class="headerlink" href="#non-standard-modules" title="Permalink to this headline">¶</a></h3>
 <p>In addition to standard modules, your python distribution can also include non-standard modules and packages using the PIP (<a class="reference external" href="https://pypi.org">https://pypi.org</a>).
 Python is one of the most popular programming language due to the incredible number of powerful modules and packages available on PIP. You can
 install <cite>numpy</cite>, <cite>scipy</cite>, <cite>pandas</cite> and <cite>matplotlib</cite>. If you want to experiment on web development, I recommend you to install <cite>flask</cite> or <cite>django</cite>.
 Finally, if you want to experiment with Machine Learning or Deep Learning algorithms, just install the <cite>scikit-learn</cite> or <cite>pytorch</cite> frameworks.</p>
 <section id="package-installer-for-python">
-<h4>Package installer for Python<a class="headerlink" href="#package-installer-for-python" title="Permalink to this heading">#</a></h4>
+<h4>Package installer for Python<a class="headerlink" href="#package-installer-for-python" title="Permalink to this headline">¶</a></h4>
 <p>PIP is the Package installer for Python. To obtain the list of available modules and packages installed in your computer, open your terminal and run the command</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip list
 </pre></div>
@@ -635,7 +617,7 @@ For example, a scientific python distribution (such as the Anaconda distribution
 <p>where <code class="code docutils literal notranslate"><span class="pre">{modulename}</span></code> is replaced by the name of the module to be installed.</p>
 </section>
 <section id="example">
-<h4>Example<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h4>
+<h4>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h4>
 <p>The following example illustrates the use of non-standard modules and packages. This example presents a simple program that computes and displays a sinewave using the scientific modules <code class="code docutils literal notranslate"><span class="pre">numpy</span></code> and <code class="code docutils literal notranslate"><span class="pre">matplotlib</span></code>.</p>
 <ul class="simple">
 <li><p>Numpy provides a multidimensional array object, various derived objects (such as masked arrays and matrices), and an assortment of routines for fast operations on arrays, including mathematical, logical, shape manipulation, sorting, selecting, I/O, discrete Fourier transforms, basic linear algebra, basic statistical operations, random simulation and much more (see offical documentation: <a class="reference external" href="https://numpy.org/doc/stable/">https://numpy.org/doc/stable/</a>)</p></li>
@@ -667,42 +649,39 @@ For example, a scientific python distribution (such as the Anaconda distribution
 <li><p>[Matplotlib] xlabel: <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.xlabel.html">https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.xlabel.html</a></p></li>
 <li><p>[Matploltib] show: <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html">https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html</a></p></li>
 </ul>
-</div>
+</aside>
 </section>
 </section>
 </section>
 </section>
 
 
-              </article>
+              </div>
               
-
               
-          </div>
+          </main>
           
+
       </div>
     </div>
-
   
-  
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
-
-<footer class="bd-footer"><div class="bd-footer__inner container">
-  
-  <div class="footer-item">
-    <p class="copyright">
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
     &copy; Copyright 2021, V. Choqueuse.<br>
 </p>
-  </div>
-  
-  <div class="footer-item">
-    <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.1.<br>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.<br>
 </p>
+    </div>
+    
   </div>
-  
-</div>
 </footer>
   </body>
 </html>
