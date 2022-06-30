@@ -5,4 +5,5 @@ Tutorials
     :maxdepth: 1
     :caption: Contents:
 
+    turtle
     tkinter
