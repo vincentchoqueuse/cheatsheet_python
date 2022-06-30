@@ -1,12 +1,7 @@
 Graphical User Interface (GUI) using Tkinter 
 ============================================
 
-This tutorial provides several bootstrap codes for Tkinter.
-
-
-.. note ::
-    
-    Documentation of Tkinter is available `here <https://docs.python.org/3/library/tk.html>`_ .
+This tutorial provides several bootstrap codes for Tkinter. The Documentation of Tkinter is available `here <https://docs.python.org/3/library/tk.html>`_ .
 
 
 Classical Approach
