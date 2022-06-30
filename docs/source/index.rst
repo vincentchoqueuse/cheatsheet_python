@@ -14,5 +14,8 @@ Python Course
    getting_started/index
    courses/index
    exercices/index
+   tutorials/index
+   projects/index
    cheatsheet
+
    
