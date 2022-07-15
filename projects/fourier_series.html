@@ -1,22 +1,16 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Fourier Series Synthesizer &#8212; python  documentation</title>
-<script>
-  document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
-  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
-</script>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
-
-
+    
   <link rel="stylesheet"
     href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
@@ -24,57 +18,54 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/css/blank.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
-
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Cheatsheet" href="../cheatsheet.html" />
     <link rel="prev" title="Projects" href="index.html" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="en">
-  </head>
-  
-  
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="light">
-    <div class="bd-header-announcement container-fluid" id="banner">
-      
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
 
-    </div>
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
 
     
-    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
 
   <div id="navbar-start">
     
     
-  
 
-
-<a class="navbar-brand logo" href="../index.html">
-  
-  
-  
-  
-    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image">
-    <img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image">
-  
-  
+<a class="navbar-brand" href="../index.html">
+  <img src="../_static/logo.png" class="logo" alt="logo">
 </a>
+
+
     
   </div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="fas fa-bars"></span>
+    <span class="navbar-toggler-icon"></span>
   </button>
 
   
@@ -128,18 +119,12 @@
     <div id="navbar-end">
       
       <div class="navbar-end-item">
-        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
-    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
-    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
-    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
-</span>
-      </div>
-      
-      <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/vincentchoqueuse/cheatsheet_python" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label></a>
+          <a class="nav-link" href="https://github.com/vincentchoqueuse/cheatsheet_python" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
         </li>
       </ul>
       </div>
@@ -150,18 +135,17 @@
     </nav>
     
 
-    <div class="bd-container container-xl">
-      <div class="bd-container__inner row">
+    <div class="container-xl">
+      <div class="row">
           
-
-<!-- Only show if we have sidebars configured, else just a small margin  -->
-<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
-  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    <p aria-level="2" class="caption" role="heading">
+    <p>
  <span class="caption-text">
   Contents:
  </span>
@@ -176,21 +160,17 @@
 
   </div>
 </nav>
-  </div>
-  <div class="sidebar-end-items">
-  </div>
-</div>
-
-
+            </div>
+            
           
 
-
-<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
-  
-    
-    <div class="toc-item">
-      
-<div class="tocsection onthispage mt-5 pt-1 pb-3">
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -224,7 +204,7 @@
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
+    <a class="reference internal nav-link" href="#instructions-1">
      Instructions
     </a>
    </li>
@@ -233,27 +213,29 @@
 </ul>
 
 </nav>
-    </div>
-    
-    <div class="toc-item">
-      
-    </div>
-    
-  
-</div>
-
-
-          
-          
-          <div class="bd-content col-12 col-md-9 col-xl-7">
+              </div>
               
-              <article class="bd-article" role="main">
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
                 
   <section id="fourier-series-synthesizer">
-<h1>Fourier Series Synthesizer<a class="headerlink" href="#fourier-series-synthesizer" title="Permalink to this heading">#</a></h1>
+<h1>Fourier Series Synthesizer<a class="headerlink" href="#fourier-series-synthesizer" title="Permalink to this headline">¶</a></h1>
 <p>The goal of this project is to create a <a class="reference external" href="https://en.wikipedia.org/wiki/Fourier_series">Fourier series synthesizer</a> with a user interface.</p>
 <section id="mathematical-model">
-<h2>Mathematical Model<a class="headerlink" href="#mathematical-model" title="Permalink to this heading">#</a></h2>
+<h2>Mathematical Model<a class="headerlink" href="#mathematical-model" title="Permalink to this headline">¶</a></h2>
 <p>The amplitude-phase form decomposition is given by</p>
 <div class="math notranslate nohighlight">
 \[x(t) = \sum_{l=0}^{L} a_l \cos(2\pi l f_0 t+\phi_l)\]</div>
@@ -264,11 +246,11 @@
 </ul>
 </section>
 <section id="first-part">
-<h2>First Part<a class="headerlink" href="#first-part" title="Permalink to this heading">#</a></h2>
+<h2>First Part<a class="headerlink" href="#first-part" title="Permalink to this headline">¶</a></h2>
 <p>The objective of the first part is to draw the waveform <span class="math notranslate nohighlight">\(x(t)\)</span> with <span class="math notranslate nohighlight">\(t=n/F_s\)</span> where
 <span class="math notranslate nohighlight">\(F_s\)</span> is the sampling frequency.</p>
 <section id="instructions">
-<h3>Instructions<a class="headerlink" href="#instructions" title="Permalink to this heading">#</a></h3>
+<h3>Instructions<a class="headerlink" href="#instructions" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Using Numpy, create a time vector ranging from <span class="math notranslate nohighlight">\(t=0\)</span> s to <span class="math notranslate nohighlight">\(t=1\)</span> s.</p></li>
 <li><p>Using Numpy, compute the vector <span class="math notranslate nohighlight">\(x(t)\)</span>.</p></li>
@@ -276,7 +258,7 @@
 </ul>
 </section>
 <section id="example">
-<h3>Example<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h3>
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
 <p>Parameters :</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fs</span> <span class="o">=</span> <span class="mi">1000</span>
 <span class="n">f0</span> <span class="o">=</span> <span class="mi">1</span>
@@ -289,10 +271,10 @@
 </section>
 </section>
 <section id="second-part">
-<h2>Second Part<a class="headerlink" href="#second-part" title="Permalink to this heading">#</a></h2>
+<h2>Second Part<a class="headerlink" href="#second-part" title="Permalink to this headline">¶</a></h2>
 <p>The objective of the second part is to create a user interface using tkinter for specifying the values of <span class="math notranslate nohighlight">\(a_l\)</span> and <span class="math notranslate nohighlight">\(phi_l\)</span> .</p>
-<section id="id2">
-<h3>Instructions<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<section id="instructions-1">
+<h3>Instructions<a class="headerlink" href="#instructions-1" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Using Tkinter (see tutorials section) with two frames, create the following interface with user entries for specifying the values of <span class="math notranslate nohighlight">\(a_l\)</span></p></li>
 </ul>
@@ -311,35 +293,32 @@
 </section>
 
 
-              </article>
+              </div>
               
-
               
-          </div>
+          </main>
           
+
       </div>
     </div>
-
   
-  
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
-
-<footer class="bd-footer"><div class="bd-footer__inner container">
-  
-  <div class="footer-item">
-    <p class="copyright">
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
     &copy; Copyright 2021, V. Choqueuse.<br>
 </p>
-  </div>
-  
-  <div class="footer-item">
-    <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.<br>
 </p>
+    </div>
+    
   </div>
-  
-</div>
 </footer>
   </body>
 </html>
