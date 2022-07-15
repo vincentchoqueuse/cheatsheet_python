@@ -80,3 +80,7 @@ html_theme_options = {
             "icon": "fab fa-github-square",
         }]
 }
+
+html_context = {
+   "default_mode": "light"
+}
