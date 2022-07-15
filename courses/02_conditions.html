@@ -1,16 +1,22 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<html lang="en">
   <head>
-    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Conditional Statements &#8212; python  documentation</title>
-    
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+<script>
+  document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
+</script>
 
-    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+
+
   <link rel="stylesheet"
     href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
@@ -18,54 +24,56 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../_static/css/blank.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
-    
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Iterations" href="03_iterations.html" />
     <link rel="prev" title="Python Basics" href="01_basics.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
-    
-
-    <!-- Google Analytics -->
-    
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="en">
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="light">
+    <div class="bd-header-announcement container-fluid" id="banner">
+      
+
+    </div>
 
     
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
 
   <div id="navbar-start">
     
     
+  
 
-<a class="navbar-brand" href="../index.html">
-  <img src="../_static/logo.png" class="logo" alt="logo">
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image">
+    <img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image">
+  
+  
 </a>
-
-
     
   </div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+    <span class="fas fa-bars"></span>
   </button>
 
   
@@ -119,12 +127,18 @@
     <div id="navbar-end">
       
       <div class="navbar-end-item">
+        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
+    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
+    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
+    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
+</span>
+      </div>
+      
+      <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/vincentchoqueuse/cheatsheet_python" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/vincentchoqueuse/cheatsheet_python" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
@@ -135,17 +149,18 @@
     </nav>
     
 
-    <div class="container-xl">
-      <div class="row">
+    <div class="bd-container container-xl">
+      <div class="bd-container__inner row">
           
-            
-            <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+
+<!-- Only show if we have sidebars configured, else just a small margin  -->
+<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
+  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    <p>
+    <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Contents:
  </span>
@@ -175,17 +190,21 @@
 
   </div>
 </nav>
-            </div>
-            
-          
+  </div>
+  <div class="sidebar-end-items">
+  </div>
+</div>
+
 
           
-          <div class="d-none d-xl-block col-xl-2 bd-toc">
-            
-              
-              <div class="toc-item">
-                
-<div class="tocsection onthispage pt-5 pb-3">
+
+
+<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
+  
+    
+    <div class="toc-item">
+      
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -267,36 +286,34 @@
 </ul>
 
 </nav>
-              </div>
-              
-              <div class="toc-item">
-                
-              </div>
-              
-            
-          </div>
-          
+    </div>
+    
+    <div class="toc-item">
+      
+    </div>
+    
+  
+</div>
+
 
           
           
-            
-          
-          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+          <div class="bd-content col-12 col-md-9 col-xl-7">
               
-              <div>
+              <article class="bd-article" role="main">
                 
   <section id="conditional-statements">
-<h1>Conditional Statements<a class="headerlink" href="#conditional-statements" title="Permalink to this headline">¶</a></h1>
+<h1>Conditional Statements<a class="headerlink" href="#conditional-statements" title="Permalink to this heading">#</a></h1>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>In the previous chapter, we have implemented simple programs where every line of code is executed sequentially.
 However, it is pretty common to use <strong>flow control statements</strong>. This section focuses on a particular subclass of flow control statements called conditional statements.
 A condition statement executes a specific line of codes (or block of codes) only if a condition is met.</p>
 </section>
 <section id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">#</a></h2>
 <section id="general-syntax">
-<h3>General Syntax<a class="headerlink" href="#general-syntax" title="Permalink to this headline">¶</a></h3>
+<h3>General Syntax<a class="headerlink" href="#general-syntax" title="Permalink to this heading">#</a></h3>
 <p>A condition statement is composed of a <code class="code docutils literal notranslate"><span class="pre">if...else</span></code> statement that checks if a boolean condition is <code class="code docutils literal notranslate"><span class="pre">True</span></code> or <code class="code docutils literal notranslate"><span class="pre">False</span></code>. Then, depending on the
 value of the condition, the program is routed to a particular block of codes.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condition</span><span class="p">:</span>
@@ -308,14 +325,14 @@ value of the condition, the program is routed to a particular block of codes.</p
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>In Python, a block of code is delimited by an indentation that is specified using 4 spaces. Each block of codes can contain one or several lines of codes.</p>
-</aside>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>A <code class="code docutils literal notranslate"><span class="pre">if</span></code> statement always ends with the character <code class="code docutils literal notranslate"><span class="pre">:</span></code></p>
-</aside>
+</div>
 </section>
 <section id="example">
-<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h3>
 <p>The following code implements a simple program that generates a random number and checks its parity (odd or even).</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
 
@@ -330,14 +347,14 @@ value of the condition, the program is routed to a particular block of codes.</p
 </pre></div>
 </div>
 <section id="import-and-initialization">
-<h4>Import and Initialization<a class="headerlink" href="#import-and-initialization" title="Permalink to this headline">¶</a></h4>
+<h4>Import and Initialization<a class="headerlink" href="#import-and-initialization" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>First, we import the <code class="code docutils literal notranslate"><span class="pre">randint</span></code> function of the random module to generate a random number.</p></li>
 <li><p>Then, we generate a random number between 0 and 20 (excluded)</p></li>
 </ul>
 </section>
 <section id="conditional-statement">
-<h4>Conditional Statement<a class="headerlink" href="#conditional-statement" title="Permalink to this headline">¶</a></h4>
+<h4>Conditional Statement<a class="headerlink" href="#conditional-statement" title="Permalink to this heading">#</a></h4>
 <p>The code is composed of the following conditional statement <code class="code docutils literal notranslate"><span class="pre">if</span> <span class="pre">(my_number</span> <span class="pre">%</span> <span class="pre">2)</span> <span class="pre">==</span> <span class="pre">0:</span></code>. This particular statement performs multiple operations.</p>
 <ol class="arabic simple">
 <li><p>First, the modulo arithmetic operator <code class="code docutils literal notranslate"><span class="pre">x</span> <span class="pre">%</span> <span class="pre">y</span></code> computes the remainder of the integer division x/y. In our particular case, the expression <code class="code docutils literal notranslate"><span class="pre">my_number</span> <span class="pre">%</span> <span class="pre">2</span></code> can only return two values:</p></li>
@@ -365,10 +382,10 @@ value of the condition, the program is routed to a particular block of codes.</p
 </section>
 </section>
 <section id="conditions">
-<h2>Conditions<a class="headerlink" href="#conditions" title="Permalink to this headline">¶</a></h2>
+<h2>Conditions<a class="headerlink" href="#conditions" title="Permalink to this heading">#</a></h2>
 <p>This section describes the most classical ways to write a condition in Python.</p>
 <section id="value-comparisons">
-<h3>Value comparisons<a class="headerlink" href="#value-comparisons" title="Permalink to this headline">¶</a></h3>
+<h3>Value comparisons<a class="headerlink" href="#value-comparisons" title="Permalink to this heading">#</a></h3>
 <p>For value comparisons, the general syntax is given by</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">value1</span> <span class="n">operator</span> <span class="n">value2</span>
 </pre></div>
@@ -389,10 +406,10 @@ In Python, the most used operators are</p>
 <li><p>The operator <code class="code docutils literal notranslate"><span class="pre">==</span></code> corresponds to a test.</p></li>
 <li><p>The operator <code class="code docutils literal notranslate"><span class="pre">=</span></code> corresponds to a variable assignement.</p></li>
 </ul>
-</aside>
+</div>
 </section>
 <section id="boolean-operations">
-<h3>Boolean operations<a class="headerlink" href="#boolean-operations" title="Permalink to this headline">¶</a></h3>
+<h3>Boolean operations<a class="headerlink" href="#boolean-operations" title="Permalink to this heading">#</a></h3>
 <p>The following operators can generate a boolean value from one or two conditions.</p>
 <ul class="simple">
 <li><p><code class="code docutils literal notranslate"><span class="pre">or</span></code>: returns <code class="code docutils literal notranslate"><span class="pre">True</span></code> if either the left boolean or the right boolean is True.</p></li>
@@ -402,12 +419,12 @@ In Python, the most used operators are</p>
 </section>
 </section>
 <section id="if-statements">
-<h2>If statements<a class="headerlink" href="#if-statements" title="Permalink to this headline">¶</a></h2>
+<h2>If statements<a class="headerlink" href="#if-statements" title="Permalink to this heading">#</a></h2>
 <p>In some situations, it is only interesting to route the program to a particular block of codes if the condition is <code class="code docutils literal notranslate"><span class="pre">True</span></code>. Other programs also require
 explicitly routing the program to another block of codes if the condition is <code class="code docutils literal notranslate"><span class="pre">False</span></code>. To take into account the diversity of situations,
 the Python language includes different declinations of the <code class="code docutils literal notranslate"><span class="pre">if</span></code> statement.</p>
 <section id="simple-statement">
-<h3>Simple statement<a class="headerlink" href="#simple-statement" title="Permalink to this headline">¶</a></h3>
+<h3>Simple statement<a class="headerlink" href="#simple-statement" title="Permalink to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">boolean_value</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;value is true&quot;</span><span class="p">)</span>
 </pre></div>
@@ -415,7 +432,7 @@ the Python language includes different declinations of the <code class="code doc
 <p>The simple <code class="code docutils literal notranslate"><span class="pre">if</span></code> statement executes the following block of code only if the condition is met.</p>
 </section>
 <section id="if-else-statement">
-<h3>If / Else statement<a class="headerlink" href="#if-else-statement" title="Permalink to this headline">¶</a></h3>
+<h3>If / Else statement<a class="headerlink" href="#if-else-statement" title="Permalink to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">boolean_value</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;show if true&quot;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
@@ -425,7 +442,7 @@ the Python language includes different declinations of the <code class="code doc
 <p>The simple <code class="code docutils literal notranslate"><span class="pre">if/else</span></code> statement executes the first block of code only if the condition is met. Else, it executes the second block of code.</p>
 </section>
 <section id="if-elif-else-statement">
-<h3>If / Elif / Else statement<a class="headerlink" href="#if-elif-else-statement" title="Permalink to this headline">¶</a></h3>
+<h3>If / Elif / Else statement<a class="headerlink" href="#if-elif-else-statement" title="Permalink to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;value is lower than 10&quot;</span><span class="p">)</span>
 <span class="k">elif</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
@@ -442,32 +459,35 @@ multiple <code class="code docutils literal notranslate"><span class="pre">elif<
 </section>
 
 
-              </div>
+              </article>
               
-              
-          </main>
-          
 
+              
+          </div>
+          
       </div>
     </div>
+
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
-<footer class="footer mt-5 mt-md-0">
-  <div class="container">
-    
-    <div class="footer-item">
-      <p class="copyright">
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
+
+<footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    <p class="copyright">
     &copy; Copyright 2021, V. Choqueuse.<br>
 </p>
-    </div>
-    
-    <div class="footer-item">
-      <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.<br>
-</p>
-    </div>
-    
   </div>
+  
+  <div class="footer-item">
+    <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
+</p>
+  </div>
+  
+</div>
 </footer>
   </body>
 </html>

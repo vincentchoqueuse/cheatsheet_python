@@ -1,16 +1,22 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<html lang="en">
   <head>
-    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Conditions and Statements &#8212; python  documentation</title>
-    
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+<script>
+  document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
+</script>
 
-    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+
+
   <link rel="stylesheet"
     href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
@@ -18,54 +24,57 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../../_static/css/blank.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
-    
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Iterations" href="../03_iterations/index.html" />
     <link rel="prev" title="Variables" href="../01_variables/index.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
-    
-
-    <!-- Google Analytics -->
-    
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="en">
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="light">
+    <div class="bd-header-announcement container-fluid" id="banner">
+      
+
+    </div>
 
     
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
 
   <div id="navbar-start">
     
     
+  
 
-<a class="navbar-brand" href="../../index.html">
-  <img src="../../_static/logo.png" class="logo" alt="logo">
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Logo image">
+    <img src="../../_static/logo.png" class="logo__image only-dark" alt="Logo image">
+  
+  
 </a>
-
-
     
   </div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+    <span class="fas fa-bars"></span>
   </button>
 
   
@@ -119,12 +128,18 @@
     <div id="navbar-end">
       
       <div class="navbar-end-item">
+        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
+    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
+    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
+    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
+</span>
+      </div>
+      
+      <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/vincentchoqueuse/cheatsheet_python" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/vincentchoqueuse/cheatsheet_python" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
@@ -135,17 +150,18 @@
     </nav>
     
 
-    <div class="container-xl">
-      <div class="row">
+    <div class="bd-container container-xl">
+      <div class="bd-container__inner row">
           
-            
-            <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+
+<!-- Only show if we have sidebars configured, else just a small margin  -->
+<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
+  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    <p>
+    <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Contents:
  </span>
@@ -175,17 +191,21 @@
 
   </div>
 </nav>
-            </div>
-            
-          
+  </div>
+  <div class="sidebar-end-items">
+  </div>
+</div>
+
 
           
-          <div class="d-none d-xl-block col-xl-2 bd-toc">
-            
-              
-              <div class="toc-item">
-                
-<div class="tocsection onthispage pt-5 pb-3">
+
+
+<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
+  
+    
+    <div class="toc-item">
+      
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -248,30 +268,28 @@
 </ul>
 
 </nav>
-              </div>
-              
-              <div class="toc-item">
-                
-              </div>
-              
-            
-          </div>
-          
+    </div>
+    
+    <div class="toc-item">
+      
+    </div>
+    
+  
+</div>
+
 
           
           
-            
-          
-          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+          <div class="bd-content col-12 col-md-9 col-xl-7">
               
-              <div>
+              <article class="bd-article" role="main">
                 
   <section id="conditions-and-statements">
-<h1>Conditions and Statements<a class="headerlink" href="#conditions-and-statements" title="Permalink to this headline">¶</a></h1>
+<h1>Conditions and Statements<a class="headerlink" href="#conditions-and-statements" title="Permalink to this heading">#</a></h1>
 <section id="mathematical-programs">
-<h2>Mathematical Programs<a class="headerlink" href="#mathematical-programs" title="Permalink to this headline">¶</a></h2>
+<h2>Mathematical Programs<a class="headerlink" href="#mathematical-programs" title="Permalink to this heading">#</a></h2>
 <section id="exercice-1">
-<h3>Exercice 1<a class="headerlink" href="#exercice-1" title="Permalink to this headline">¶</a></h3>
+<h3>Exercice 1<a class="headerlink" href="#exercice-1" title="Permalink to this heading">#</a></h3>
 <p>Write a Python program that finds and displays the maximum of a list composed of three numbers. For example, if the content of the list is given
 by <code class="code docutils literal notranslate"><span class="pre">my_numbers</span> <span class="pre">=</span> <span class="pre">[19,</span> <span class="pre">21,</span> <span class="pre">5]</span></code>, the programs must display the number 21.</p>
 <p><strong>Specifications</strong></p>
@@ -280,7 +298,7 @@ by <code class="code docutils literal notranslate"><span class="pre">my_numbers<
 </ul>
 </section>
 <section id="exercice-2">
-<h3>Exercice 2<a class="headerlink" href="#exercice-2" title="Permalink to this headline">¶</a></h3>
+<h3>Exercice 2<a class="headerlink" href="#exercice-2" title="Permalink to this heading">#</a></h3>
 <p>Write a Python program that checks if a number <code class="code docutils literal notranslate"><span class="pre">value</span></code> can be divided by 5 and by 7 and displays a message to the user using the <cite>print</cite> function.</p>
 <p><strong>Specifications</strong></p>
 <ul class="simple">
@@ -289,7 +307,7 @@ by <code class="code docutils literal notranslate"><span class="pre">my_numbers<
 </ul>
 </section>
 <section id="exercice-3">
-<h3>Exercice 3<a class="headerlink" href="#exercice-3" title="Permalink to this headline">¶</a></h3>
+<h3>Exercice 3<a class="headerlink" href="#exercice-3" title="Permalink to this heading">#</a></h3>
 <p>Write a Python program that randomly generates a <code class="code docutils literal notranslate"><span class="pre">number</span></code> between 1 to 6 (included) using the <code class="code docutils literal notranslate"><span class="pre">randint()</span></code> function and compares the generated number with a number <code class="code docutils literal notranslate"><span class="pre">guess</span></code> specified by the user.
 If the <code class="code docutils literal notranslate"><span class="pre">number</span></code> is equal to <code class="code docutils literal notranslate"><span class="pre">guess</span></code>, the program must display the following message <code class="code docutils literal notranslate"><span class="pre">Well</span> <span class="pre">done,</span> <span class="pre">Bro</span> <span class="pre">!</span></code>, else it must display the message <code class="code docutils literal notranslate"><span class="pre">No</span> <span class="pre">Luck,</span> <span class="pre">loser</span></code>.</p>
 <p><strong>Specifications</strong></p>
@@ -300,15 +318,15 @@ If the <code class="code docutils literal notranslate"><span class="pre">number<
 </ul>
 </section>
 <section id="exercice-4">
-<h3>Exercice 4<a class="headerlink" href="#exercice-4" title="Permalink to this headline">¶</a></h3>
+<h3>Exercice 4<a class="headerlink" href="#exercice-4" title="Permalink to this heading">#</a></h3>
 <p>The Exclusive or (XOR) or exclusive disjunction is a logical operation that is true if and only if its arguments differ. Let us consider two booleans <code class="code docutils literal notranslate"><span class="pre">value1</span></code> and <code class="code docutils literal notranslate"><span class="pre">value2</span></code>.
 The result of a XOR operation is equal to:</p>
 <ul class="simple">
 <li><p><code class="code docutils literal notranslate"><span class="pre">1</span></code> if <strong>exactly one of the two booleans</strong> is equal to 1,</p></li>
 <li><p><code class="code docutils literal notranslate"><span class="pre">0</span></code> in all the other cases.</p></li>
 </ul>
-<table class="table" id="table-1">
-<caption><span class="caption-text">XOR Operator</span><a class="headerlink" href="#table-1" title="Permalink to this table">¶</a></caption>
+<table class="table" id="id1">
+<caption><span class="caption-text">XOR Operator</span><a class="headerlink" href="#id1" title="Permalink to this table">#</a></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 33%" />
@@ -337,7 +355,7 @@ The result of a XOR operation is equal to:</p>
 </ul>
 </section>
 <section id="exercice-5">
-<h3>Exercice 5<a class="headerlink" href="#exercice-5" title="Permalink to this headline">¶</a></h3>
+<h3>Exercice 5<a class="headerlink" href="#exercice-5" title="Permalink to this heading">#</a></h3>
 <p>Write a Python program that computes a price reduction.
 The initial price is stored in a variable <code class="code docutils literal notranslate"><span class="pre">price</span></code>. The reduction price is then computed from the customer <code class="code docutils literal notranslate"><span class="pre">age</span></code>.</p>
 <ul class="simple">
@@ -353,7 +371,7 @@ The initial price is stored in a variable <code class="code docutils literal not
 </ul>
 </section>
 <section id="exercice-6">
-<h3>Exercice 6<a class="headerlink" href="#exercice-6" title="Permalink to this headline">¶</a></h3>
+<h3>Exercice 6<a class="headerlink" href="#exercice-6" title="Permalink to this heading">#</a></h3>
 <p>Let us consider the following second order polynomial</p>
 <div class="math notranslate nohighlight">
 \[p(x) = a_2x^2+a_1x +a_0.\]</div>
@@ -366,9 +384,9 @@ The initial price is stored in a variable <code class="code docutils literal not
 </section>
 </section>
 <section id="turtle-drawings">
-<h2>Turtle Drawings<a class="headerlink" href="#turtle-drawings" title="Permalink to this headline">¶</a></h2>
+<h2>Turtle Drawings<a class="headerlink" href="#turtle-drawings" title="Permalink to this heading">#</a></h2>
 <section id="exercice-7">
-<h3>Exercice 7<a class="headerlink" href="#exercice-7" title="Permalink to this headline">¶</a></h3>
+<h3>Exercice 7<a class="headerlink" href="#exercice-7" title="Permalink to this heading">#</a></h3>
 <p>Write a Python program that draws a shape with <code class="code docutils literal notranslate"><span class="pre">L</span></code> sides using Turtle.</p>
 <ul class="simple">
 <li><p>if <code class="code docutils literal notranslate"><span class="pre">L</span></code> is strictly lower to 2, the program does not draw any shape,</p></li>
@@ -383,7 +401,7 @@ The initial price is stored in a variable <code class="code docutils literal not
 </ul>
 </section>
 <section id="exercice-8">
-<h3>Exercice 8<a class="headerlink" href="#exercice-8" title="Permalink to this headline">¶</a></h3>
+<h3>Exercice 8<a class="headerlink" href="#exercice-8" title="Permalink to this heading">#</a></h3>
 <p>Write a Python program that compares a user string input with the password value <code class="code docutils literal notranslate"><span class="pre">&quot;secret145&quot;</span></code>.</p>
 <ul class="simple">
 <li><p>If the user string is equal to <code class="code docutils literal notranslate"><span class="pre">&quot;secret145&quot;</span></code>, the program must draw a green rectangle using turtle,</p></li>
@@ -401,32 +419,35 @@ The initial price is stored in a variable <code class="code docutils literal not
 </section>
 
 
-              </div>
+              </article>
               
-              
-          </main>
-          
 
+              
+          </div>
+          
       </div>
     </div>
+
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
-<footer class="footer mt-5 mt-md-0">
-  <div class="container">
-    
-    <div class="footer-item">
-      <p class="copyright">
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
+
+<footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    <p class="copyright">
     &copy; Copyright 2021, V. Choqueuse.<br>
 </p>
-    </div>
-    
-    <div class="footer-item">
-      <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.<br>
-</p>
-    </div>
-    
   </div>
+  
+  <div class="footer-item">
+    <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
+</p>
+  </div>
+  
+</div>
 </footer>
   </body>
 </html>
